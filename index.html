@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pierwsze petle</title>
+        <meta name="Viewport" content="width=device-width initial-scale=1.0">
+     </head>
+     <body>
+         <div id="box">
+
+         </div>
+         <p id="admitted"></p>
+         <p id="refused"></p>
+         <script>
+             let output = document.getElementById("box");
+             output.innerHTML = '';
+          
+            
+            let func = () => {
+             for (i = 10; 0 <= i;i--){
+	            const para = document.createElement('p');
+                (i == 0)?
+	            para.textContent = "Blast off!": para.textContent = i 
+	            output.appendChild(para);
+            };
+            };
+
+            let guest = () => {
+                const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 
+                                'Kay', 'Bruce'];
+    
+                const admitted = document.getElementById('admitted');
+                const refused = document.getElementById('refused');
+                admitted.textContent = 'Admit: ';
+                refused.textContent = 'Refuse: ';
+                for (i = 0; i < people.length; i++){
+                (people[i] ==  'Phil' || people[i] == 'Lola') 
+                ?  refused.textContent += people[i] + ", " : admitted.textContent += people[i] + ", ";
+                }
+                refused.textContent = refused.textContent.slice(0, refused.textContent.length-2) + ".";
+                admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length-2) + ".";
+
+            }
+
+         </script>
+     </body>
+</html>
